@@ -1,0 +1,26 @@
+.input_container {
+  padding: 10px;
+  background-color: white;
+}
+
+.input_container input {
+  display: block;
+  width: 100%;
+  padding: 10px 0px;
+  background: inherit;
+  outline: none;
+  border: 1px solid #5bc0de;
+}
+
+.error_border {
+  border: 1px solid #d9534f !important;
+}
+
+.success_border {
+  border: 1px solid #102c10 !important;
+}
+
+.error {
+  display: block;
+  color: #d9534f;
+}
