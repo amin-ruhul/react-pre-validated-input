@@ -1,13 +1,15 @@
 {
   "name": "react-pre-validated-input",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "react-pre-validated-input",
   "author": "Ruhul Amin <ruhulamin35160@gmail.com>",
   "keywords": [
     "react",
     "components",
-    "ui"
+    "ui",
+    "validate",
+    "validated input"
   ],
   "main": "dist/index.js",
   "module": "dist/index.js",
