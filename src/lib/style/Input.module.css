@@ -9,7 +9,7 @@ select {
   display: block;
   width: 100%;
   /* padding: 6px 0px; */
-  padding: 6px 0px 6px 5px;
+  padding: 8px 0px 8px 5px;
   background: inherit;
   outline: none;
   border: 1px solid #5bc0de;
