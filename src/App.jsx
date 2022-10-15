@@ -1,4 +1,5 @@
 import Input from "./lib/components/Input";
+import { Select } from "./lib";
 
 function App() {
   const inputStyle = {
@@ -17,14 +18,14 @@ function App() {
       <Input
         name="Last Name"
         minLen={5}
+        type="textarea"
         validateReg={/^[a-zA-Z]+$/}
         inputChange={(data) => console.log(data)}
       />
-      <Input
-        type="email"
-        name="email"
-        minLen={5}
-        inputChange={(data) => console.log(data)}
+
+      <Select
+        placeholder="Select city"
+        selectOptions={[{ label: "a", value: "a" }]}
       />
     </div>
   );

@@ -1,3 +1,4 @@
 import Input from "./components/Input";
+import Select from "./components/Select";
 
-export { Input };
+export { Input, Select };

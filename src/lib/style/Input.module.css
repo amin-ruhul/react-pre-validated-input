@@ -3,14 +3,23 @@
   background-color: white;
 }
 
-.input_container input {
+.input_container input,
+textarea,
+select {
   display: block;
   width: 100%;
-  padding: 10px 0px;
+  /* padding: 6px 0px; */
+  padding: 6px 0px 6px 5px;
   background: inherit;
   outline: none;
   border: 1px solid #5bc0de;
 }
+
+/* Chrome/Opera/Safari/Edge */
+/* input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  padding-left: 5px;
+} */
 
 .error_border {
   border: 1px solid #d9534f !important;
