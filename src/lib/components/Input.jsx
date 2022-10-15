@@ -14,6 +14,8 @@ function Input({
   inputClass = "",
   errorClass = "",
   validateReg = null,
+  height = "",
+  placeholder = "",
   inputChange = function () {},
 }) {
   // declare state
@@ -65,19 +67,39 @@ function Input({
       className={`${containerClass} ${styles.input_container}`}
       style={{ ...inputContainerStyle }}
     >
-      <input
-        className={`${inputClass} ${error.length > 0 && styles.error_border} ${
-          valid && styles.success_border
-        } `}
-        style={{ ...inputStyle }}
-        type={type}
-        value={inputValue}
-        minLength={minLen}
-        maxLength={maxLen}
-        disabled={isDisable}
-        onChange={(e) => handelInputChange(e.target.value)}
-        onBlur={(e) => validateInput(e.target.value)}
-      />
+      {type !== "textarea" && (
+        <input
+          className={`${inputClass} ${
+            error.length > 0 && styles.error_border
+          } ${valid && styles.success_border} `}
+          style={{ ...inputStyle }}
+          type={type}
+          value={inputValue}
+          minLength={minLen}
+          maxLength={maxLen}
+          disabled={isDisable}
+          placeholder={placeholder}
+          onChange={(e) => handelInputChange(e.target.value)}
+          onBlur={(e) => validateInput(e.target.value)}
+        />
+      )}
+      {type === "textarea" && (
+        <textarea
+          className={`${inputClass} ${
+            error.length > 0 && styles.error_border
+          } ${valid && styles.success_border} `}
+          style={{ ...inputStyle }}
+          type={type}
+          placeholder={placeholder}
+          value={inputValue}
+          minLength={minLen}
+          maxLength={maxLen}
+          disabled={isDisable}
+          rows={height}
+          onChange={(e) => handelInputChange(e.target.value)}
+          onBlur={(e) => validateInput(e.target.value)}
+        />
+      )}
       <small
         style={{ ...errorStyle }}
         className={`${errorClass} ${styles.error}`}
